@@ -1,7 +1,32 @@
 
-<h1>{{ title }}</h1>
-<ul>
-  <li>{{curso}}</li>
-  <li>{{alumno}}</li>
-</ul>
-  
+<button (click)="setVisible()">
+  {{visible?'OCULTAR': 'MOSTRAR'}}
+</button>
+
+@if(visible){
+
+  @if(users != undefined && users.length > 0){
+
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+        </tr>
+      </thead>
+      <tbody>
+         @for(user of users;track  $index){
+          <tr>
+            <td>{{$index+1}}</td>
+            <td>{{user}}</td>
+          </tr>
+         }
+      </tbody>
+    </table>
+  }@else{
+    <p>El users esta vacio</p>
+  }
+
+}@else {
+  <h1>No esta disponible la pagina</h1>
+}
