@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { FormComponent } from './clientes/form.component';
 
 @Component({
   selector: 'app-root',
@@ -15,10 +16,11 @@ import { FooterComponent } from './footer/footer.component';
     UserComponent, 
     ClientesComponent,
     FooterComponent,
+    FormComponent,
     HeaderComponent,
     FormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styles: ["./app.component.css"]
 })
 export class AppComponent {
   title: string = 'Bienvenido a Angular';

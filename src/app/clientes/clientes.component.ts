@@ -11,7 +11,7 @@ import { ClienteService } from './cliente.service';
   imports: [CommonModule],
    providers: [DatePipe], 
   templateUrl: './clientes.component.html',
-  styles: ``
+  styles: []
 })
 export class ClientesComponent {
   
