@@ -1,37 +1,7 @@
-
-<button (click)="setVisible()">
-  {{visible?'OCULTAR': 'MOSTRAR'}}
-</button>
-
-@if(visible){
-
-  @if(users != undefined && users.length > 0){
-
-    <table>
-      <thead>
-        <tr>
-          <th>id</th>
-          <th>name</th>
-        </tr>
-      </thead>
-      <tbody>
-         @for(user of users;track  $index){
-          <tr>
-            <td>{{$index+1}}</td>
-            <td>{{user}}</td>
-          </tr>
-         }
-      </tbody>
-    </table>
-  }@else{
-    <p>El users esta vacio</p>
-  }
-
-}@else {
-  <h1>No esta disponible la as</h1>
-  
-}
-
-<app-user></app-user>
 <app-header></app-header>
-<app-clientes></app-clientes>
+
+<div class="container my-3">
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>

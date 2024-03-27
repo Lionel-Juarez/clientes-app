@@ -3,10 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
-  template: ``,
-  styles: ``
+  templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-
+ title: string = 'App Angular'
 }
